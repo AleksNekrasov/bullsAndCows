@@ -20,8 +20,10 @@ int main()
     int bull = 0 ;  // счетчик быков
 
     // считаем коров
-    for (int start = 0; start < number1.length(); start++)
+    int start = 0;
+    for ( ; start < number1.length(); start++)
     {
+       
         for (int i = 0; i < number2.length(); i++)
         {
             if (number1[start] == number2[i] && start != i)
@@ -29,6 +31,7 @@ int main()
                 if ((number1[i] != number2[i]) && number1[start] != number2[start])
                 {
                     cow++;
+                    start++;
                     break;
                 }
             }
