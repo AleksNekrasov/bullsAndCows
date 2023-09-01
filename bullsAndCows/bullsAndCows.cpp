@@ -26,8 +26,11 @@ int main()
         {
             if (number1[start] == number2[i] && start != i)
             {
-                cow++;
-                break;
+                if ((number1[i] != number2[i]) && number1[start] != number2[start])
+                {
+                    cow++;
+                    break;
+                }
             }
         }
     }
